@@ -1,0 +1,17 @@
+<h1 style="text-align: center;">About Me</h1>
+  <ul style="text-align: center;" id="item-list"></ul>
+
+  <script>
+    // Array of items
+    const items = ['My name is Jon Lima', 'I am 35 years old', 'I\'m from Miami, FL', 'I have a degree in Information Technology', 'I think I\'m pretty cool'];
+
+    // Get the ul element by id
+    const itemList = document.getElementById('item-list');
+
+    // Iterate over the items array and create li elements for each item
+    items.forEach(function(item) {
+      const li = document.createElement('li');
+      li.textContent = item;
+      itemList.appendChild(li);
+    });
+  </script>

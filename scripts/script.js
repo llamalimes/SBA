@@ -1,6 +1,5 @@
 // Get a reference to the main content div
 const mainContent = document.getElementById("main-content");
-
 // Pull Down Menu html
 function updateContent(mainContent, selectedItem) {
   switch (selectedItem) {
@@ -116,7 +115,6 @@ function updateContent(mainContent, selectedItem) {
       mainContent.innerHTML = "<h1>Main Content</h1><p>Please select an item from the dropdown menu.</p>";
   }
 }
-
 // Event listener for the dropdown menu
 document.querySelectorAll('.dropdown-item').forEach(item => {
   item.addEventListener('click', event => {
@@ -124,40 +122,6 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
     updateContent(mainContent, selectedItem);
   });
 });
-
-//Form validation via regex
-function validateForm() {
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var phone = document.getElementById("phone").value;
-  var message = document.getElementById("message").value;
-  var nameRegex = /^[A-Za-z\s]+$/;
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  var phoneRegex = /^[0-9]{10}$/;
-
-  if (!name.match(nameRegex)) {
-    document.getElementById("error").innerHTML = "Invalid name format. Please use only letters and spaces.";
-    return false;
-  }
-
-  if (!email.match(emailRegex)) {
-    document.getElementById("error").innerHTML = "Invalid email format.";
-    return false;
-  }
-
-  if (!phone.match(phoneRegex)) {
-    document.getElementById("error").innerHTML = "Invalid phone number format. Please enter 10 digits.";
-    return false;
-  }
-
-  if (message.trim() === "") {
-    document.getElementById("error").innerHTML = "Please enter a message.";
-    return false;
-  }
-
-  return true;
-}
-
 //jquery navbar links
 $(document).ready(function() {
   // Load home page content by default
@@ -169,9 +133,9 @@ $(document).ready(function() {
     $('#main-content').load('contact.html');
   });
   //Load services page content when services link is clicked
-  $('#sercivesLink').click(function(e) {
+  $('#aboutLink').click(function(e) {
     e.preventDefault();
-    $('#main-content').load('services.html');
+    $('#main-content').load('about.html');
   });
   // Load home page content when home link is clicked
   $('#homeLink').click(function(e) {

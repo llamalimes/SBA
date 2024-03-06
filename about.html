@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>My Favorite Music</title>
+  <title>About Me</title>
   <link rel="stylesheet" href="css\style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -19,7 +19,17 @@
   </style>
 </head>
 <body>
-<h1>My Favorite Music</h1>
-<p><i>Please select an item from the dropdown menu.</i></p>
+  <h1>Fact Generator</h1>
+  <div id="container">
+    <p id="itemContent">There is stuff here.</p>
+  </div>
+  <button id="next-btn">Generate</button>
+  <br>
+  <form id="add-form">
+    <input type="text" id="new-item" placeholder="Enter new item">
+    <br>
+    <button type="submit">Add new fact</button>
+  </form>
+  <script src="scripts\about.js"></script>
 </body>
 </html>
